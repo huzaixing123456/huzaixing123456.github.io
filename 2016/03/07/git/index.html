@@ -89,13 +89,13 @@ $ git config --global &quot;252174621@qq.com&quot;
 </code></pre><p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH key”，填上任意的title，在key文本框里面粘贴id_rsa.pub的<br>内容，点“Add Key”，你就应该看到已经添加的Key。</p>
 <p><strong>为什么GitHub需要SSH Key呢</strong> : 因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
 <h1 id="git的常用命令"><a href="#git的常用命令" class="headerlink" title="git的常用命令"></a>git的常用命令</h1><blockquote>
-<p>##创建版本库</p>
+<p>创建版本库</p>
 </blockquote>
 <p>选择一个合适的目录，通过以下命令将该目录变成Git可管理的仓库</p>
 <pre><code>git init
 </code></pre><p>Git就把仓库建好了，并且是一个空的仓库，当前目录下会有一个.git的目录，这个目录是Git来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。   </p>
 <blockquote>
-<p>##提交文件</p>
+<p>提交文件</p>
 </blockquote>
 <p>第一步：使用git add命令，将要提交的文件添加到仓库暂存区</p>
 <pre><code>git add hzx.txt
@@ -107,15 +107,15 @@ $ git config --global &quot;252174621@qq.com&quot;
 <pre><code>git push origin master
 </code></pre><p>origin是远程库的默认名，master是要推送的分支。    </p>
 <blockquote>
-<p>##版本回退 </p>
+<p>版本回退 </p>
 <blockquote>
-<p>###查看提交记录</p>
+<p>查看提交记录</p>
 </blockquote>
 </blockquote>
 <pre><code>git log
 </code></pre><p>每次提交都会产生一个commit id，Git的commit id是一个SHA1计算出来的一个非常大的数字，用十六进制表示，只要找到commit id，就可以任意穿梭于各个版本之间。（git log显示的commit id最上面的是最新的版本，一般显示前几个，需要按enter键查看所有，另外退出git log按q即可）</p>
 <blockquote>
-<p>###会退到指定版本</p>
+<p>会退到指定版本</p>
 </blockquote>
 <pre><code>git reset --hard d458hyd(commit id)
 </code></pre><p>其中的commit id可以只写最前面的七位，Git会自动匹配。当然会退到某一个版本还有快捷的指令，如下：    </p>
@@ -123,23 +123,23 @@ $ git config --global &quot;252174621@qq.com&quot;
 git reset --hard HEAD^^(会退到上上个版本)
 git reset --hard HEAD~100(会退到上一百个版本)
 </code></pre><blockquote>
-<p>###未来版本</p>
+<p>未来版本</p>
 </blockquote>
 <pre><code>git reflog
 </code></pre><p>有时候回退到某一个版本时想更新到未来版本，但是git log是查不到的，可以用此指令查看全部的操作日志，找到commit id。    </p>
 <blockquote>
-<p>##管理修改 </p>
+<p>管理修改 </p>
 <blockquote>
-<p>###查看文件状态</p>
+<p>查看文件状态</p>
 </blockquote>
 </blockquote>
 <pre><code>git status
 </code></pre><blockquote>
-<p>###查看文件详细修改内容</p>
+<p>查看文件详细修改内容</p>
 </blockquote>
 <pre><code>git diff HEAD -- hzx.txt
 </code></pre><blockquote>
-<p>##撤销修改</p>
+<p>撤销修改</p>
 </blockquote>
 <pre><code>git checkout -- hzx.txt
 </code></pre><ul>
@@ -148,20 +148,20 @@ git reset --hard HEAD~100(会退到上一百个版本)
 <li>另外注意，如果提交到暂存区后没做任何修改，此时回退没有效果。再想做版本只能通过commit id了;checkout后面一定个要有–，要不然就成为分支切换了;刚删除的文件也可以用此方式恢复文件。</li>
 </ul>
 <blockquote>
-<p>##删除文件</p>
+<p>删除文件</p>
 </blockquote>
 <pre><code>git rm hzx.txt(删除指定的文件)
 git commit -m &quot;提交说明&quot;（将删除文件的记录提交到本地仓库，注意，前面无须add到暂存区了）
 </code></pre><h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><p>几乎每一种版本控制系统都以某种形式支持分支，在项目开发的过程中，分支之间的切换是一件非常普遍的事情，从原理上说：分支本质上其实就是一个指向某次提交的可变指针。我所理解的分支其实就是一个clone出来的副本，主体与副本时间是平行互不影响的，可以在副本上做任何其他操作，然后合并到主体上，例如，一般的项目，有个上线的主分支，用在在开发完成之后，合并代码上线，另外还有一个开发人员使用的开发分支、测试人员使用的测试分支以及修复bug的分支。Git 的分支可谓是难以置信的轻量级，它的新建操作几乎可以在瞬间完成，并且在不同分支间切换起来也差不多一样快。和许多其他版本控制系统不同，Git 鼓励在工作流程中频繁使用分支与合并，哪怕一天之内进行许多次都没有关系。</p>
 <blockquote>
-<p>##创建分支 </p>
+<p>创建分支 </p>
 </blockquote>
 <pre><code>git branch (查看分支)
 git branch hzx (创建分支hzx)
 git checkout hzx （切换到hzx分支）
 git checkout -b hzx （创建分支hzx，并且切换到hzx分支 -b表示创建并切换）
 </code></pre><blockquote>
-<p>##合并 </p>
+<p>合并 </p>
 </blockquote>
 <p>切换到要合并到的分支，比如将hzx合并到master，则先切到master分支。</p>
 <pre><code>git merge hzx
@@ -169,12 +169,12 @@ git checkout -b hzx （创建分支hzx，并且切换到hzx分支 -b表示创建
 <pre><code>git merge --no-ff -m &quot;合并说明&quot; hzx
 </code></pre><p><strong>–no-ff</strong>表示禁用fast forward模式，此种方式合并代码两个分支之间才是真正的代码合并，并且合并后的历史有分支，看得出来曾经做过合并。</p>
 <blockquote>
-<p>##删除分支 </p>
+<p>删除分支 </p>
 </blockquote>
 <pre><code>git branch -d hzx
 git branch -D hzx
 </code></pre><blockquote>
-<p>##bug分支</p>
+<p>bug分支</p>
 </blockquote>
 <p>在Git中，由于分支是如此的强大，每个BUG都可以通过一个新的临时分支来修复，一般情况下，一个bug的修复过程大概是：<strong>切换bug分支-修复bug-合并分支-bug分支删除</strong>。有时候接到临时任务，紧急修复某一个BUG，但是你在dev上正在进行的开发工作还没有完成，不方便提交，以免影响其它小伙伴，此时可以将dev上的已进行的工作进行储藏，等以后恢复现场后继续工作。（如果不储藏，此时切换到另外一个bug分支的话，那么已经完成的那一部分代码将丢失）</p>
 <pre><code>git stash (当前分支还未提交的文件进行储藏)
@@ -182,7 +182,7 @@ git stash list (查看当前分支储藏列表)
 git stash apply (恢复储藏的内容，但是stash并不删除，可用git stash drop删除)
 git stash pop (恢复储藏的内容，并且将stash删除)
 </code></pre><blockquote>
-<p>##分支的其他操作</p>
+<p>分支的其他操作</p>
 </blockquote>
 <p>注意：clone代码的时候，只有master分支，其他分支是不会clone下来的，所以想要想要创建远程的dev分支到本地：</p>
 <pre><code>git checkout -b dev origin/dev
@@ -217,7 +217,7 @@ CONFLICT (content): Merge conflict in reset.txt
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:yoursite.com">
   </form>
 </div>
@@ -226,7 +226,7 @@ CONFLICT (content): Merge conflict in reset.txt
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
     
       <li>
