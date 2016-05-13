@@ -62,7 +62,7 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-05-06T08:31:53.000Z"><a href="/2016/05/06/angular/">2016-05-06</a></time>
+        <time datetime="2016-05-06T06:21:22.000Z"><a href="/2016/05/06/angular/">2016-05-06</a></time>
       
       
   
@@ -155,6 +155,85 @@
 </li>
 </ul>
 <p>参考：<a href="http://www.angularjs.cn/A09C" target="_blank" rel="external">angualar作用域参考</a></p>
+<h2 id="angular基础"><a href="#angular基础" class="headerlink" title="angular基础"></a>angular基础</h2><h3 id="angular内置指令"><a href="#angular内置指令" class="headerlink" title="angular内置指令"></a>angular内置指令</h3><ul>
+<li><p><strong>ng-app:</strong></p>
+</li>
+<li><p>ng-app指令是angular的入口，在模板中只能有一个，告诉angularjS从模板哪里开始使用angular进行管理，如果想仅仅在模板的任意局部位置使用angualar，只需要在此节点添加ng-app指令即可。给模板填加入口有以下两种方式：</p>
+<pre><code>自动启动：直接在模板DOM节点添加ng-app指令
+
+手动启动：angular.bootstrap(document.getElementById(&quot;hzx&quot;),[&quot;hzx&quot;]);
+</code></pre><p>  手动启动可以设置多个angular入口，但是根据angular严格划分模块的思想，不建议模板内再次划分多个独立模块</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>ng-init:</strong></p>
+</li>
+<li><p>ng-init 指令初始化应用程序数据，一般是常量，用于轻量级的数据，比如初始化一个变量或者是一个对象，更推荐在控制器里面写</p>
+<pre><code>初始化一个变量：&lt;div ng-init =&apos;hzx1=&quot;huzaixing2&quot;&apos; &gt;{{hzx1}}&lt;/div&gt;
+
+初始化一个对象：&lt;div ng-init = &apos;obj = {&quot;name&quot;:&quot;huzaixing3&quot;}&apos;&gt;{{obj.name}}&lt;/div&gt;
+
+初始化数组：&lt;div ng-init = &apos;arr = [&quot;huzaixing1&quot;,&quot;huzaixing4&quot;]&apos;&gt;{{arr[1]}}&lt;/div&gt;
+</code></pre></li>
+<li><p><strong>ng-bind:</strong></p>
+</li>
+<li><p>定界符是输出angular数据提供的方式，但是有时候避免UI闪烁，更推荐使用ng-bind方式，此方式先将数据以属性方式绑定到DOM节点上，再插入到节点之间</p>
+<pre><code>&lt;div ng-bind=&apos;&quot;胡再兴&quot;&apos;&gt;&lt;/div&gt;
+</code></pre><p>  <strong>注意</strong>：有时候ng-bind的数据包含标准的html字符，如果要做此类的格式化输出，则需要使用ng-bind-html指令，同时需要引入进行危险验证的angular-santize.js模块</p>
+<pre><code>var app = angular.module(&quot;myApp&quot;, [&apos;ngSanitize&apos;]);
+    app.controller(&quot;myCtrl&quot;, function($scope) {
+    $scope.myText = &quot;My name is: &lt;h1&gt;胡再兴&lt;/h1&gt;&quot;;
+});
+</code></pre></li>
+</ul>
+<ul>
+<li><p><strong>ng-repeat:</strong></p>
+</li>
+<li><p>ng-repeat指令根据应用程序数据进行循环迭代，为集合中的每条数据创立新的DOM元素，此指令并不止于对集合的初次渲染，它还对数据源进行持续的监视，以便在数据源发生变化时，重新渲染模板。</p>
+<pre><code>&lt;div ng-init=&apos;my = [{&quot;name&quot;:&quot;huzaixing&quot;},{&quot;name&quot;:&quot;huzaixing2&quot;},{&quot;name&quot;:&quot;huzaixing3&quot;}]&apos;&gt;
+    &lt;table&gt;
+        &lt;tr ng-repeat =&quot;user in my&quot;&gt;
+            &lt;td&gt;{{user.name}}&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code></pre></li>
+<li><p>ng-repeat会为每一项迭代元素创建作用域,并且同时声明一组特殊变量，他们可以用来确定此元素在集合中的位置</p>
+<pre><code>$index:指代元素在集合中的索引数字 
+
+$first、$middle、$last：这些变量会根据元素的位置获取对应的boolen值
+</code></pre></li>
+<li><p>除了可以迭代数组，还可以迭代对象的属性</p>
+<pre><code>&lt;div  ng-init=&apos;my = {&quot;name&quot;:&quot;huzaixing&quot;,&quot;aame&quot;:&quot;auzaixing2&quot;,&quot;name&quot;:&quot;huzaixing3&quot;}&apos;&gt;
+    &lt;table&gt;
+        &lt;tr ng-repeat =&quot;(name,value) in my&quot;&gt;
+            &lt;td index = &quot;{{$index}}&quot;&gt;{{value}}&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code></pre></li>
+</ul>
+<p><strong>注意：</strong>在迭代对象属性的时候，尽管可以通过索引获取给定属性在已排序好的全属性列表中的位置，但是不能控制迭代的吮顺序，它是按照无序列表来显示的(对属性按照字母排序)</p>
+<ul>
+<li><p><strong>ng-switch:</strong></p>
+</li>
+<li><p><strong>ng-switch</strong>与js中的switch语句很想，用来根据条件判断</p>
+<pre><code>&lt;table&gt;
+    &lt;tr ng-switch on=&quot;MY.name&quot;&gt;
+        &lt;td ng-switch-when = &quot;hzx&quot;&gt; 这里的值是真值 &lt;/td&gt;
+        &lt;td ng-switch-when = &quot;hzx1&quot;&gt; 这里的值是真值 &lt;/td&gt;
+        &lt;td ng-switch-default = &quot;hzx&quot;&gt; 这里的值是默认值 &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre><p>  ng-switch可以设置多组不同的条件，根据条件判断添加或者移除DOM</p>
+</li>
+<li><p><strong>ng-show/ng-hide</strong></p>
+<pre><code>&lt;div ng-show = &quot;MY.bool&quot;&gt; 当为真值时显示 &lt;/div&gt;
+&lt;div ng-hide = &quot;MY.bool&quot;&gt; 为真值时隐藏 &lt;/div&gt;
+</code></pre></li>
+<li><p>这两个指令只是简单根据表达式条件设置样式隐藏或者出现，并不会对DOM进行操作，如果出现多组表达式结果，并且对DOM要求干净，建议使用ng-switch指令</p>
+</li>
+</ul>
 
       
     </div>
@@ -569,7 +648,7 @@ gulp.src(&apos;script/**/*.js&apos;)
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="search" name="q" results="0" placeholder="Search">
     <input type="hidden" name="q" value="site:yoursite.com">
   </form>
 </div>
@@ -578,7 +657,7 @@ gulp.src(&apos;script/**/*.js&apos;)
 
   
 <div class="widget tag">
-  <h3 class="title">Neueste Artikel</h3>
+  <h3 class="title">Recent Posts</h3>
   <ul class="entry">
     
       <li>
