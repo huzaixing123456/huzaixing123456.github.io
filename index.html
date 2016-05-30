@@ -1,889 +1,288 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8" />
-  
-  <title>Hexo</title>
-  <meta name="author" content="John Doe" />
 
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+    <!--Description-->
+    
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
 
-  
-  <meta property="og:site_name" content="Hexo" />
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Hexo"/>
+    
 
-  
-  
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="null" />
+    
 
-  
-    <meta property="og:image" content="undefined" />
-  
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
 
-  
-  <link href="/css/images/favicon.ico" rel="icon" />
-  
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
 
-  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://yoursite.comundefined"/>
+    
 
+        <meta name="twitter:card" content="summary" />
+    
 
-  <!-- baidu webmaster push -->
-  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+    <!-- Title -->
+    
+    <title>Hexo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
 
 </head>
 
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Hexo</a></h1>
-  <h2><a href="/"></a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-05-27T12:34:22.000Z"><a href="/2016/05/27/webapp/">2016-05-27</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/05/27/webapp/">webapp</a></h1>
-  
 
-    </header>
-    <div class="entry">
-      
-        <h1 id="webapp适配方案"><a href="#webapp适配方案" class="headerlink" title="webapp适配方案"></a>webapp适配方案</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
-<li><p><strong>物理像素(physical pixel)</strong>：一个物理像素是显示器(手机屏幕)上最小的物理显示单元，在操作系统的调度下，每一个设备像素都有自己的颜色值和亮度值。（通俗的可以这样理解：屏幕都是由很多个小点聚在一起组成，这每一个点就是一个设备像素，并且每个点都有自己的属性，包括颜色值以及亮度等）</p>
-</li>
-<li><p><strong>设备独立像素(density-independent pixel)</strong>：设备独立像素(也叫密度无关像素)，可以认为是计算机坐标系统中得一个点，这个点代表一个可以由程序使用的虚拟像素(比如: css像素)，然后由相关系统转换为物理像素。（就是说我们在网页上写的css的px代码，最终在页面渲染的时候都会转化为设备像素）</p>
-</li>
-<li><p><strong>注意：我们常说的分辨率指的就是物理像素（设备像素）。</strong></p>
-</li>
-<li><p><strong>设备像素比(device pixel ratio )</strong>：物理像素和设备独立像素之间存在着一定的对应关系，可以按照下面的公式得到</p>
-<pre><code>设备像素比 = 物理像素 / 设备独立像素 // 在某一方向上，x方向或者y方向
-</code></pre><p>  在javascript中，可以通过<strong>window.devicePixelRatio</strong>来获取，也就是我们常说的dpr</p>
-<pre><code>var dpr = window.devicePixelRatio
-</code></pre><p>  于是在在css中，可以通过-webkit-device-pixel-ratio，-webkit-min-device-pixel-ratio和 -webkit-max-device-pixel-ratio进行媒体查询，对不同dpr的设备，做一些样式适配(这里只针对webkit内核的浏览器和webview)(不提倡)。</p>
-</li>
-<li><p>以iphone6为例：</p>
-<pre><code>设备尺寸375*667：即手机屏幕的尺寸：宽375px，高667px，即设备独立像素是375*667
-
-设备的分辨率是750*1334，就是说屏幕是有750*1334个小点组成
-</code></pre><p>  从上面可以算出，iphon6的dpr为 750/375 = 2，即我们在网页上写的1px，最终在渲染时候就变是2个物理像素</p>
-</li>
-<li><p>我们知道，同样的屏幕尺寸，当它的分辨率越大，就展示的越清晰，这也就不难理解为什么iphone6 plus的图片看起来比iphone6更清晰了</p>
-<p> 因为它的dpr=3，即一个css单位最终转化为3个设备像素，这就是ratina的由来（经常在电脑上，我们电脑上的dpr通常设置为1，即1920px的</p>
-<p> 屏幕，我们的分辨率默认设置为1920*，但是当你缩小分辨率时，就发现了桌面突变变大，变虚了）</p>
-<pre><code>结论：同等尺寸的设备，dpr越大，越清晰，跟我们常说的分辨率越大越清晰就是同一个理了，包含的物理像素越多越清晰
-</code></pre></li>
-<li><p>看看IMG</p>
-<p>  通常在APP里面会加载多张图片进行适配，但是在web里面，根据不同的分辨率加载不同的图片，变得不太现实，究其原因，就是因为</p>
-<p>  andriow屏幕的碎片化，那么在web里面又如何做适配呢。</p>
-<p>  在PC项目里面，常规做法是：切下来的图片是多大，那我们css里面，基本就是设置多大（先不说css3），但是在移动端，又是什么情况呢</p>
-<p>  例如一张200*300的图片我们也这样写的话，在iphone6 plus下和在普通的android手机下呢；</p>
-<pre><code>iphone6 plus下：dpr = 3 ；那么该图片占用的物理像素就是200*3/300*3个物理像素
-
-普通android手机：dpr = 2 ; 那么该图片占用的物理像素就是200*2/300*2个物理像素
-
-自然根据上面的原理，在iphone6下面，图片变的更虚了。
-
-所以这也不难理解，在ratina出来之前，为什么会有二倍图适配一说了（但是ratina一出来，这种方式基本立马就被淘汰了）
-
-在固定像素大小的盒子里面，物理像素个数与图片尺寸（即px）保持1：1时图像最清晰，物理像素个数大于图片尺寸时，
-
-也是比较清晰的，但是当物理像素个数小于图片尺寸时，图片就会变虚
-</code></pre><p>  <strong>结论：</strong>最新的设计基本都是基于iphone6，即超高清晰的图片（也有说的是三倍图）。</p>
-</li>
-</ul>
-<h2 id="适配"><a href="#适配" class="headerlink" title="适配"></a>适配</h2><p>通过以上这些基本可以初窥端倪，于是最好的适配方案当然是想办法让我们css中写的px尺寸与最终在终端屏幕上的物理点数，建立连接，并且保持到最好的1:1,先来了解几个相关概念</p>
-<ul>
-<li><p>webkit内核的meta属性</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,maximum-scale=1.0, 
-minimun-scale=1.0,initial-scale=1.0,user-scalable=yes&quot;&gt;
-</code></pre></li>
-</ul>
-<p>手机浏览器是把页面放在一个虚拟的“窗口”(viewport)中，通常这个虚拟的“窗口”(viewport)比屏幕宽，默认值是980px，这样就不用把每个网页挤到很小的窗口中(这样会破坏没有针对手机浏览器优化的网页的布局)，用户可以通过平移和缩放来看网页的不同部分。移动版的 Safari 浏览器最新引进了 viewport 这个 meta tag，让网页开发者来控制 viewport 的大小和缩放，其他手机浏览器也基本支持。</p>
-<p>Viewport的常用参数如下：</p>
-<pre><code>&lt;meta name=”viewport”
-content=”
-height = [pixel_value | device-height] ,
-width = [pixel_value | device-width ] ,
-initial-scale = float_value ,
-minimum-scale = float_value ,
-maximum-scale = float_value ,
-user-scalable = [yes | no] ,
-target-densitydpi = [dpi_value | device-dpi | high-dpi | medium-dpi | low-dpi]
-/&gt;
-</code></pre><p>经常会用到的width = device-width，很多可能没有注意到，device-width到底等于多少，是屏幕的分辨率宽度还是屏幕尺寸，这里强调一下，就是分辨率</p>
-<pre><code>width = device-width（iphone6的话就是750）width=750
-
-initial-scale = float_value ,设置viewport的缩放比例
-
-（以iphone6为例，initial为1/2，当然这个值是怎么得来的，后面再讲解）
-</code></pre><p>传统的做法：即百分比或者是媒介查询在一段时间时间内是webapp适配的主流，但是在高清的retina的出现，这种做法越来越暴露出了各种缺陷：</p>
-<pre><code>大屏访问的时候完全没法看：PC或者ipad
-
-图片拉扯的很厉害，并且严重失真，不容易控制
-
-不规则的设计很大程度上无法实现
-
-在不同的手机屏幕下，其实有很多肉眼无法辨认出来的缺陷
-
-其问题的关键点就是没有将viewport与屏幕分辨率以及尺寸建立起一定的联系
-</code></pre><p>于是结合以上，最好的适配方案呼之欲出：</p>
-<pre><code>即动态设置viewport与宽度及其收缩比例：
-
-(function(){
-    var dpr, rem, scale,width;
-    var docEl = document.documentElement;
-    var fontEl = document.createElement(&apos;style&apos;);
-    var metaEl = document.querySelector(&apos;meta[name=&quot;viewport&quot;]&apos;);
-    dpr = window.devicePixelRatio || 1;
-    width = docEl.offsetWidth;
-    if (width / dpr &gt;= 621) {
-        rem = 750/10;
-    }else{
-        rem = width  * dpr / 10;
-    }
-    scale = 1 / dpr;
-
-// 设置viewport，进行缩放，达到高清效果
-    metaEl.setAttribute(&apos;content&apos;, &apos;width=&apos; + dpr * width + &apos;,initial-scale=&apos; + scale + &apos;,maximum-scale=&apos; + scale + &apos;, minimum-scale=&apos; + scale + &apos;,user-scalable=no&apos;);
-
-// 设置data-dpr以及font-size属性，留作的css hack之用
-    docEl.setAttribute(&apos;data-dpr&apos;, dpr);
-    docEl.setAttribute(&apos;style&apos;,&quot;font-size:&quot; +  rem + &quot;px!important&quot;);
-
-
-    window.dpr = dpr;
-    window.rem = rem;
-
-})();
-</code></pre><p>关于这段代码的意思，大家都是专业人士，之前肯定看到过多次，在此就不过多的在做解释，其中需要说明的一点仅仅是：</p>
-<pre><code>dpr = window.devicePixelRatio || 1;即设备像素比，这是在webkit中最先暴漏出来的属性，通过此属性，获取不同手机尺寸以及分辨率之间的关系，以便后面设定缩放比例
-</code></pre><p>不同的分辨率手机执行最终的代码肯定不一样,例如，在iphone下执行时:其最终结果如下：</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=750,initial-scale=0.5,
-
-maximum-scale=0.5, minimum-scale=0.5,user-scalable=no&quot;&gt;
-</code></pre><p>iphone6的屏幕尺寸为375px，当我们设置viewport为750px时，再将viewport缩放0.5倍，最终的viewport刚好就是375，也就是正好铺满手机屏幕。于是，对于任何的手机，viewport与屏幕尺寸都已经建立起了相对应的关联关系，也就说说，将所有的手机一视同仁，无关于尺寸，无关于分辨率了。切图的时候按照美工提供的一种尺寸，完全就可以以绝对大小进行宽度以及高度的设置，相当于PC那种固定的方式切图了。</p>
-<ul>
-<li>好用的rem</li>
-</ul>
-<p>上面已经产生了适配方案，那么在实际切图的过程中，具体的代码实现，该注意些什么，既然当成了PC切图，那么如果美工提供的是750px宽度的设计稿，我们能否将body的宽度设置在750px呢</p>
-<p>根据上面的讲解，我想结果不言而喻（这里不过说明，留待大家去实践）。</p>
-<p>那么如果能够在既要设置绝对大小（非简单的百分比方式），又可以在多终端上运行的话，那么这个div的宽度必然就是手机宽度，但是css却是静态的，css3的rem单位在这里取到的至关重要的作用</p>
-<p>px是网页的绝对单位，但是rem却是相对单位，有关rem的具体概念不做详细说明，这里只是介绍rem在适配中取到的作用</p>
-<p>默认情况下，网页如果没做任何字体定义，默认就是16px，也就是1rem = 16px；</p>
-<p>但是当我们在根节点html上写font-size = 100px时，此时的1rem = 100px;</p>
-<p>并且rem是可以被继承的，不同于em（继承与父节点），rem是根节点继承，也就是网页上所有的元素都相对于html根节点继承</p>
-<p>所以在上面的适配方案中，我们也看到对根节点html的字体设置：根据计算不同分辨率手机得出的font-size值，就是说不同的分辨率手机最终通过适配方案得到的font-size值是不一样的</p>
-<pre><code>于是：在宽度为750的手机上：font-size值动态设置为75
-
-在宽度为640的手机上：font-size值动态设置为64
-</code></pre><p>那么我们在css样式表里面写10rem的时候，不同的手机最终得到的大小就是不一样的，但是完全适配各种屏幕（其中的实质就是讲手机尺寸以及分辨率以及viewport建立起了一定的联系，等比进行的不同程度的缩放）。于是在各种分辨率情况下，用rem对任何元素写绝对大小都可以完美适配不同手机。</p>
-<p>（至此，完美的适配方案已经定型）</p>
-<p><strong>当然：</strong>在各种不同浏览器下面还是存在一些不同程度的BUG，究其原因，主要是低端浏览器厂商对viewport相关的支持度不是十分友好造成的，但是瑕不掩瑜，此方案已经成为各大公司wabapp适配的主流方案</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://div.io/topic/1092" target="_blank" rel="external">移动端高清、多屏适配方案</a> </p>
-<p><a href="https://github.com/amfe/article/issues/17" target="_blank" rel="external">使用Flexible实现手淘H5页面的终端适配</a> </p>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Hexo</h1>
+                    <hr class="small">
+                    <span class="subheading"></span>
+                </div>
+            </div>
         </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-05-06T06:21:22.000Z"><a href="/2016/05/06/angular/">2016-05-06</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/05/06/angular/">angular</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="angular学习笔记"><a href="#angular学习笔记" class="headerlink" title="angular学习笔记"></a>angular学习笔记</h1><h2 id="angular简介"><a href="#angular简介" class="headerlink" title="angular简介"></a>angular简介</h2><p> AngularJS 是一款来自 Google 的前端 JavaScript 框架，也是 SPA（single-page-application，单页应用）框架。AngularJS 框架的体积非常小，但是设计理念和功能却非常强大，极大地简化前端开发的负担，它快速成为了 JavaScript 的主流框架，帮助开发者从事 web 开发。</p>
-<h2 id="angular特点"><a href="#angular特点" class="headerlink" title="angular特点"></a>angular特点</h2><ul>
-<li><p><strong>HTML模板</strong>：AngularJS 使用 HTML 模板，这使事情变得简单，并允许设计人员和开发人员同时工作。设计人员可以按照通常的方式创建用户界面，而开发人员可以使用声明性绑定语法很容易配合不同的UI组件的数据模型。</p>
-</li>
-<li><p><strong>双向数据绑定</strong>：数据绑定肯定是 AngularJS 最佳功能之一。你可以声明绑定的模型到 HTML 元素。当模型发生变化时，视图会自动更新，反之亦然。这可以减少大量的传统样板代码，保持模型和视图同步。</p>
-</li>
-<li><p><strong>良好的应用程序结构</strong>：通常情况下，我们编写 JavaScript 没有明确的结构。虽然在编写小应用程序的时候没有问题，但这显然是不适合于大规模的应用程序。使用 AngularJS，您可以通过MVC（模型 - 视图 - 控制器）或MVVM （模型 - 视图 - 视图模型）模式来组织源代码。 AngularJS 是一个 MVW 框架，其中W代表可以用于任何项目。你可以组织你的代码模块，它可显著提高应用程序的可测试性和可维护性。</p>
-</li>
-<li><p><strong>指令</strong>：AngularJS 指令让你使用 HTML 新语法快速的构建应用程序。您可以创建可重用的自定义组件与指令的API。例如，如果你想自定义日期选择器小部件，你可以创建一个<data-picker>组件。如果你想要一个奇特的文件上传与进度指示器可以继续创建一个<file-upload>组件。很酷，不是吗？</file-upload></data-picker></p>
-</li>
-<li><p><strong>可嵌入、注入和测试</strong>：关于 AngularJS 的最好的事情是，它是一个很好的团队成员。它从来没有要求全面承诺。AngularJS 官方网站说，你可以根据你需要使用尽可能多或尽可能少的在项目中使用 AngularJS。如果你只需要双向数据绑定，您可以引入 Angular，只是使用此功能。AngularJS 支持依赖注入的开箱即用。如果你需要的东西，你只要调用 Angular 来注入。就这么简单。这巨大的提高可测试性，因为你可以很容易地在测试的模拟组件。AngularJS 在创建时候始终考虑着可测试性。这些模块和依赖注入系统，使得单元测试更容易。此外， AngularJS 提供了一个称为量角器工具，这使得终端到终端的测试变得轻而易举。所以，你开发的代码始终是可测试性和可维护性。</p>
-</li>
-</ul>
-<h2 id="angualr实用性"><a href="#angualr实用性" class="headerlink" title="angualr实用性"></a>angualr实用性</h2><p>Angular通过给开发者呈现更高层次的抽象来简化应用的开发。和其他的抽象一样，它也以损失灵活性为代价。换句话说，Angular并不是适合任何应用的开发，Angular考虑的是构建CRUD应用。幸运的是，绝大多数WEB应用都是<strong>CRUD</strong>应用。</p>
-<h2 id="angular的一些基本概念"><a href="#angular的一些基本概念" class="headerlink" title="angular的一些基本概念"></a>angular的一些基本概念</h2><ul>
-<li>模板(Template)：带有Angular扩展标记的HTML</li>
-<li>指令(Directive)：用于通过自定义属性和元素扩展HTML的行为</li>
-<li>模型(Model)：用于显示给用户并且与用户互动的数据</li>
-<li>作用域(Scope)：用来存储模型(Model)的语境(context)。模型放在这个语境中才能被控制器、指令和表达式等访问到</li>
-<li>表达式(Expression)：模板中可以通过它来访问作用域（Scope）中的变量和函数</li>
-<li>编译器(Compiler)：用来编译模板(Template)，并且对其中包含的指令(Directive)和表达式(Expression)进行实例化</li>
-<li>过滤器(Filter)：负责格式化表达式(Expression)的值，以便呈现给用户</li>
-<li>视图(View)：用户看到的内容（即DOM）</li>
-<li>数据绑定(Data Binding)：自动同步模型(Model)中的数据和视图(View)表现</li>
-<li>控制器(Controller)：视图(View)背后的业务逻辑</li>
-<li>依赖注入(Dependency Injection)：负责创建和自动装载对象或函数</li>
-<li>注入器(Injector)：用来实现依赖注入(Injection)的容器</li>
-<li>模块(Module)：用来配置注入器</li>
-<li>服务(Service)：独立于视图(View)的、可复用的业务逻辑</li>
-</ul>
-<h2 id="深入理解angular的作用域"><a href="#深入理解angular的作用域" class="headerlink" title="深入理解angular的作用域"></a>深入理解angular的作用域</h2><ul>
-<li><p><strong>AngularJS中</strong>，子作用域一般都会通过JavaScript原型继承机制继承其父作用域的属性和方法。但有一个例外：在directive中使用scope: { … }，这种方式创建的作用域是一个独立的”Isolate”作用域，它也有父作用域，但父作用域不在其原型链上，不会对父作用域进行原型继承。这种方式定义作用域通常用于构造可复用的directive组件。作用域的原型继承是非常简单普遍的，甚至你不必关心它的运作。直到你在子作用域中向父作用域的原始类型属性使用双向数据绑定2-way data binding，比如Form表单的ng-model为父作用域中的属性，且为原始类型，输入数据后，它不会如你期望的那样运行——AngularJS不会把输入数据写到你期望的父作用域属性中去，而是直接在子作用域创建同名属性并写入数据。这个行为符合JavaScript原型继承机制的行为。</p>
-</li>
-<li><p><strong>$rootScope</strong>:Angular 应用启动并生成视图时,会将根 ng-app 元素与 $rootScope 进行绑定.$rootScope 是所有 $scope 的最上层对象,可以理解为一个 Angular 应用中得全局作用域对象,所以为它附加太多逻辑或者变量并不是一个好主意,和污染 Javascript 全局作用域是一样的.</p>
-</li>
-<li><p><strong>$scope 的作用</strong></p>
-<ul>
-<li><p>$scope 对象在 Angular 中充当数据模型的作用,也就是一般 MVC 框架中 Model 得角色.但又不完全与通常意义上的数据模型一样,因为   $scope 并不处理和操作数据,它只是建立了视图和 HTML 之间的桥梁,让视图和 Controller 之间可以友好的通讯.</p>
-</li>
-<li><p>再进一步系统的划分它的作用和功能:</p>
-</li>
-<li><p>提供了观察者可以监听数据模型的变化</p>
-</li>
-<li><p>可以将数据模型的变化通知给整个 App</p>
-</li>
-<li><p>可以进行嵌套,隔离业务功能和数据</p>
-</li>
-<li><p>给表达式提供上下文执行环境</p>
-</li>
-<li><p>在 Javascript 中创建一个新的执行上下文,实际就是用函数创建了一个新的本地上下文,在 Angular 中当为子 DOM 元素创建新的作用域时,其实就是为子 DOM 元素创建了一个新的执行上下文.</p>
-</li>
-</ul>
-</li>
-<li><p>$scope 生命周期</p>
-<ul>
-<li><p>Angular 中也有一个’事件’的概念,比如当一个绑定了 ng-model 的 input 值发生变化时,或者一个 ng-click 的 button 被点击时,Angular 的事件循环就会启动.事件循环是 Angular 中非常非常核心的一个概念,因为不是本文主旨所以不多说,感兴趣的可以自己看看资料.这里事件就在 Angular 执行上下文中处理,$scope 就会对定义的表达式求值.此时事件循环被启动, Angular 会监控应用程序内所有对象,脏值检查循环也会启动. </p>
-</li>
-<li><p>$scope 的生命周期有4个阶段:</p>
-</li>
-</ul>
-<ol>
-<li><p><strong>创建</strong>:控制器或者指令创建时, Angular 会使用 $injector 创建一个新的作用域,然后在控制器或指令运行时,将作用域传递进去.</p>
-</li>
-<li><p><strong>链接</strong>:Angular 启动后会将所有 $scope 对象附加或者说链接到视图上,所有创建 $scope 对象的函数也会被附加到视图上.这些作用域将会注册当 Angular 上下文发生变化时需要运行的函数.也就是 $watch 函数, Angular 通过这些函数或者何时开始事件循环.</p>
-</li>
-<li><p><strong>更新</strong>一旦事件循环开始运行,就会开始执行自己的脏值检测.一旦检测到变化,就会触发 $scope 上指定的回调函数</p>
-</li>
-<li><p><strong>销毁</strong>通常来讲如果一个 $scope 在视图中不再需要, Angular 会自己清理它.当然也可以通过 $destroy() 函数手动清理.</p>
-</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p>AngularJS存在四种作用域:</p>
-<ul>
-<li>普通的带原型继承的作用域 – ng-include, ng-switch, ng-controller, directive with scope: true；</li>
-<li>普通的带原型继承的，并且有赋值行为的作用域 – ng-repeat，ng-repeat为每一个迭代项创建一个普通的有原型继承的子作用域，但同时在子作用域中创建新属性存储迭代项；</li>
-<li>“Isolate”作用域 – directive with scope: {…}， 该作用域没有原型继承，但可以通过’=’, ‘@’, 和 ‘&amp;’与父作用域通信。</li>
-<li>“transcluded”作用域 – directive with transclude: true，它也是普通的带原型继承的作用域，但它与“Isolate”作用域是相邻的好基友。</li>
-</ul>
-</li>
-</ul>
-<p>参考：<a href="http://www.angularjs.cn/A09C" target="_blank" rel="external">angualar作用域参考</a></p>
-<h2 id="angular基础"><a href="#angular基础" class="headerlink" title="angular基础"></a>angular基础</h2><h3 id="angular内置指令"><a href="#angular内置指令" class="headerlink" title="angular内置指令"></a>angular内置指令</h3><ul>
-<li><p><strong>ng-app:</strong></p>
-</li>
-<li><p>ng-app指令是angular的入口，在模板中只能有一个，告诉angularjS从模板哪里开始使用angular进行管理，如果想仅仅在模板的任意局部位置使用angualar，只需要在此节点添加ng-app指令即可。给模板填加入口有以下两种方式：</p>
-<pre><code>自动启动：直接在模板DOM节点添加ng-app指令
-
-手动启动：angular.bootstrap(document.getElementById(&quot;hzx&quot;),[&quot;hzx&quot;]);
-</code></pre><p>  手动启动可以设置多个angular入口，但是根据angular严格划分模块的思想，不建议模板内再次划分多个独立模块</p>
-</li>
-</ul>
-<ul>
-<li><p><strong>ng-init:</strong></p>
-</li>
-<li><p>ng-init 指令初始化应用程序数据，一般是常量，用于轻量级的数据，比如初始化一个变量或者是一个对象，更推荐在控制器里面写</p>
-<pre><code>初始化一个变量：&lt;div ng-init =&apos;hzx1=&quot;huzaixing2&quot;&apos; &gt;{{hzx1}}&lt;/div&gt;
-
-初始化一个对象：&lt;div ng-init = &apos;obj = {&quot;name&quot;:&quot;huzaixing3&quot;}&apos;&gt;{{obj.name}}&lt;/div&gt;
-
-初始化数组：&lt;div ng-init = &apos;arr = [&quot;huzaixing1&quot;,&quot;huzaixing4&quot;]&apos;&gt;{{arr[1]}}&lt;/div&gt;
-</code></pre></li>
-<li><p><strong>ng-bind:</strong></p>
-</li>
-<li><p>定界符是输出angular数据提供的方式，但是有时候避免UI闪烁，更推荐使用ng-bind方式，此方式先将数据以属性方式绑定到DOM节点上，再插入到节点之间</p>
-<pre><code>&lt;div ng-bind=&apos;&quot;胡再兴&quot;&apos;&gt;&lt;/div&gt;
-</code></pre><p>  <strong>注意</strong>：有时候ng-bind的数据包含标准的html字符，如果要做此类的格式化输出，则需要使用ng-bind-html指令，同时需要引入进行危险验证的angular-santize.js模块</p>
-<pre><code>var app = angular.module(&quot;myApp&quot;, [&apos;ngSanitize&apos;]);
-    app.controller(&quot;myCtrl&quot;, function($scope) {
-    $scope.myText = &quot;My name is: &lt;h1&gt;胡再兴&lt;/h1&gt;&quot;;
-});
-</code></pre></li>
-</ul>
-<ul>
-<li><p><strong>ng-repeat:</strong></p>
-</li>
-<li><p>ng-repeat指令根据应用程序数据进行循环迭代，为集合中的每条数据创立新的DOM元素，此指令并不止于对集合的初次渲染，它还对数据源进行持续的监视，以便在数据源发生变化时，重新渲染模板。</p>
-<pre><code>&lt;div ng-init=&apos;my = [{&quot;name&quot;:&quot;huzaixing&quot;},{&quot;name&quot;:&quot;huzaixing2&quot;},{&quot;name&quot;:&quot;huzaixing3&quot;}]&apos;&gt;
-    &lt;table&gt;
-        &lt;tr ng-repeat =&quot;user in my&quot;&gt;
-            &lt;td&gt;{{user.name}}&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-</code></pre></li>
-<li><p>ng-repeat会为每一项迭代元素创建作用域,并且同时声明一组特殊变量，他们可以用来确定此元素在集合中的位置</p>
-<pre><code>$index:指代元素在集合中的索引数字 
-
-$first、$middle、$last：这些变量会根据元素的位置获取对应的boolen值
-</code></pre></li>
-<li><p>除了可以迭代数组，还可以迭代对象的属性</p>
-<pre><code>&lt;div  ng-init=&apos;my = {&quot;name&quot;:&quot;huzaixing&quot;,&quot;aame&quot;:&quot;auzaixing2&quot;,&quot;name&quot;:&quot;huzaixing3&quot;}&apos;&gt;
-    &lt;table&gt;
-        &lt;tr ng-repeat =&quot;(name,value) in my&quot;&gt;
-            &lt;td index = &quot;{{$index}}&quot;&gt;{{value}}&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-</code></pre></li>
-</ul>
-<p><strong>注意：</strong>在迭代对象属性的时候，尽管可以通过索引获取给定属性在已排序好的全属性列表中的位置，但是不能控制迭代的吮顺序，它是按照无序列表来显示的(对属性按照字母排序)</p>
-<ul>
-<li><p><strong>ng-switch:</strong></p>
-</li>
-<li><p><strong>ng-switch</strong>与js中的switch语句很想，用来根据条件判断</p>
-<pre><code>&lt;table&gt;
-    &lt;tr ng-switch on=&quot;MY.name&quot;&gt;
-        &lt;td ng-switch-when = &quot;hzx&quot;&gt; 这里的值是真值 &lt;/td&gt;
-        &lt;td ng-switch-when = &quot;hzx1&quot;&gt; 这里的值是真值 &lt;/td&gt;
-        &lt;td ng-switch-default = &quot;hzx&quot;&gt; 这里的值是默认值 &lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</code></pre><p>  ng-switch可以设置多组不同的条件，根据条件判断添加或者移除DOM</p>
-</li>
-<li><p><strong>ng-show/ng-hide</strong></p>
-<pre><code>&lt;div ng-show = &quot;MY.bool&quot;&gt; 当为真值时显示 &lt;/div&gt;
-&lt;div ng-hide = &quot;MY.bool&quot;&gt; 为真值时隐藏 &lt;/div&gt;
-</code></pre></li>
-<li><p>这两个指令只是简单根据表达式条件设置样式隐藏或者出现，并不会对DOM进行操作，如果出现多组表达式结果，并且对DOM要求干净，建议使用ng-switch指令</p>
-</li>
-</ul>
-
-      
     </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+                <div class="post-preview">
+    <a href="/2016/05/27/webapp/">
+        <h2 class="post-title">
+            webapp
+        </h2>
         
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
         
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-03-07T03:53:03.000Z"><a href="/2016/03/07/git/">2016-03-07</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/03/07/git/">git</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="Git的安装及配置"><a href="#Git的安装及配置" class="headerlink" title="Git的安装及配置"></a>Git的安装及配置</h1><h3 id="windows下的Git安装"><a href="#windows下的Git安装" class="headerlink" title="windows下的Git安装"></a>windows下的Git安装</h3><p>从 <a href="http://git-scm.com/download/" target="_blank" rel="external">http://git-scm.com/download/</a> 下载然后就是傻瓜式安装即可</p>
-<h3 id="Git的本地环境配置"><a href="#Git的本地环境配置" class="headerlink" title="Git的本地环境配置"></a>Git的本地环境配置</h3><pre><code>$ git config --global &quot;huzaixing123456&quot;
-
-$ git config --global &quot;252174621@qq.com&quot;
-</code></pre><p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的 <strong>名字</strong> 和 <strong>Email</strong> 地址。</p>
-<p><strong>注意</strong> : git config命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用<br>户名和Email地址。</p>
-<h1 id="github网站"><a href="#github网站" class="headerlink" title="github网站"></a>github网站</h1><p>在Git中并不存在主库的概念，每一份复制出的库都可以独立使用。但是的开发的过程中，确实需要一台中央服务器作为各协同工作之间交换的枢纽，其实完全可以自己搭建一个Git服务器，但是现阶段已经有了这样一个免费的git仓库托管服务的平台，这既是github网站，只需要注册一个github账号，就可以免费获得Git远程仓库。</p>
-<h3 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h3><p>由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点 <strong>设置</strong>：</p>
-<p>第1步：<strong>创建SSH Key</strong>。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key。</p>
-<pre><code>$ ssh-keygen -t rsa -C &quot;252174621@qq.com&quot;
-</code></pre><p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH key”，填上任意的title，在key文本框里面粘贴id_rsa.pub的<br>内容，点“Add Key”，你就应该看到已经添加的Key。</p>
-<p><strong>为什么GitHub需要SSH Key呢</strong> : 因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
-<h1 id="git的常用命令"><a href="#git的常用命令" class="headerlink" title="git的常用命令"></a>git的常用命令</h1><blockquote>
-<p>创建版本库</p>
-</blockquote>
-<p>选择一个合适的目录，通过以下命令将该目录变成Git可管理的仓库</p>
-<pre><code>git init
-</code></pre><p>Git就把仓库建好了，并且是一个空的仓库，当前目录下会有一个.git的目录，这个目录是Git来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。   </p>
-<blockquote>
-<p>提交文件</p>
-</blockquote>
-<p>第一步：使用git add命令，将要提交的文件添加到仓库暂存区</p>
-<pre><code>git add hzx.txt
-</code></pre><p>（暂存区概念：我理解的暂存区是git中开辟的一块独立的奇特区域，类似于我们常说的缓冲区，有了暂存区，工作区间与版本库之间就不在直接打交道，而是通过暂存区连接起来，这样做的好处，我总结为：可以灵活操作，比如，同时修改了几个文件，但是其中一个不想提交的话，那么git add的意义就来了，另外当一个功能还未完成，却要切换分支修改其他bug时，此时的工作去又不想提交，那么也是可以存到暂存区的。）    </p>
-<p>第二步：使用git commit命令将文件提交到本地仓库</p>
-<pre><code>git commit -m &quot;本次提交说明&quot;
-</code></pre><p>-m后面输入的是本次提交的说明，可以不输入任何内容，但是为了更好的协同工作，以及后期版本的调整，写入一些有意义的文字描述是必须的。</p>
-<p>第三步：使用git push将代码推送到远端</p>
-<pre><code>git push origin master
-</code></pre><p>origin是远程库的默认名，master是要推送的分支。    </p>
-<blockquote>
-<p>版本回退 </p>
-<blockquote>
-<p>查看提交记录</p>
-</blockquote>
-</blockquote>
-<pre><code>git log
-</code></pre><p>每次提交都会产生一个commit id，Git的commit id是一个SHA1计算出来的一个非常大的数字，用十六进制表示，只要找到commit id，就可以任意穿梭于各个版本之间。（git log显示的commit id最上面的是最新的版本，一般显示前几个，需要按enter键查看所有，另外退出git log按q即可）</p>
-<blockquote>
-<p>会退到指定版本</p>
-</blockquote>
-<pre><code>git reset --hard d458hyd(commit id)
-</code></pre><p>其中的commit id可以只写最前面的七位，Git会自动匹配。当然会退到某一个版本还有快捷的指令，如下：    </p>
-<pre><code>git reset --hard HEAD^(会退到上一个版本)
-git reset --hard HEAD^^(会退到上上个版本)
-git reset --hard HEAD~100(会退到上一百个版本)
-</code></pre><blockquote>
-<p>未来版本</p>
-</blockquote>
-<pre><code>git reflog
-</code></pre><p>有时候回退到某一个版本时想更新到未来版本，但是git log是查不到的，可以用此指令查看全部的操作日志，找到commit id。    </p>
-<blockquote>
-<p>管理修改 </p>
-<blockquote>
-<p>查看文件状态</p>
-</blockquote>
-</blockquote>
-<pre><code>git status
-</code></pre><blockquote>
-<p>查看文件详细修改内容</p>
-</blockquote>
-<pre><code>git diff HEAD -- hzx.txt
-</code></pre><blockquote>
-<p>撤销修改</p>
-</blockquote>
-<pre><code>git checkout -- hzx.txt
-</code></pre><ul>
-<li>第一种情况：文件修改后还未放进暂存区，此时撤销，就会回退到没做修改之前的状态</li>
-<li>第二种情况：文件修改后已经放进暂存区，此时又做了修改，撤销的话会回到增加到缓存区的状态</li>
-<li>另外注意，如果提交到暂存区后没做任何修改，此时回退没有效果。再想做版本只能通过commit id了;checkout后面一定个要有–，要不然就成为分支切换了;刚删除的文件也可以用此方式恢复文件。</li>
-</ul>
-<blockquote>
-<p>删除文件</p>
-</blockquote>
-<pre><code>git rm hzx.txt(删除指定的文件)
-git commit -m &quot;提交说明&quot;（将删除文件的记录提交到本地仓库，注意，前面无须add到暂存区了）
-</code></pre><h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><p>几乎每一种版本控制系统都以某种形式支持分支，在项目开发的过程中，分支之间的切换是一件非常普遍的事情，从原理上说：分支本质上其实就是一个指向某次提交的可变指针。我所理解的分支其实就是一个clone出来的副本，主体与副本时间是平行互不影响的，可以在副本上做任何其他操作，然后合并到主体上，例如，一般的项目，有个上线的主分支，用在在开发完成之后，合并代码上线，另外还有一个开发人员使用的开发分支、测试人员使用的测试分支以及修复bug的分支。Git 的分支可谓是难以置信的轻量级，它的新建操作几乎可以在瞬间完成，并且在不同分支间切换起来也差不多一样快。和许多其他版本控制系统不同，Git 鼓励在工作流程中频繁使用分支与合并，哪怕一天之内进行许多次都没有关系。</p>
-<blockquote>
-<p>创建分支 </p>
-</blockquote>
-<pre><code>git branch (查看分支)
-git branch hzx (创建分支hzx)
-git checkout hzx （切换到hzx分支）
-git checkout -b hzx （创建分支hzx，并且切换到hzx分支 -b表示创建并切换）
-</code></pre><blockquote>
-<p>合并 </p>
-</blockquote>
-<p>切换到要合并到的分支，比如将hzx合并到master，则先切到master分支。</p>
-<pre><code>git merge hzx
-</code></pre><p><strong>fast forward</strong>模式，这是进行快速合并，此种方式合并仅仅是将master指向hzx分支的当前提交。</p>
-<pre><code>git merge --no-ff -m &quot;合并说明&quot; hzx
-</code></pre><p><strong>–no-ff</strong>表示禁用fast forward模式，此种方式合并代码两个分支之间才是真正的代码合并，并且合并后的历史有分支，看得出来曾经做过合并。</p>
-<blockquote>
-<p>删除分支 </p>
-</blockquote>
-<pre><code>git branch -d hzx
-git branch -D hzx
-</code></pre><blockquote>
-<p>bug分支</p>
-</blockquote>
-<p>在Git中，由于分支是如此的强大，每个BUG都可以通过一个新的临时分支来修复，一般情况下，一个bug的修复过程大概是：<strong>切换bug分支-修复bug-合并分支-bug分支删除</strong>。有时候接到临时任务，紧急修复某一个BUG，但是你在dev上正在进行的开发工作还没有完成，不方便提交，以免影响其它小伙伴，此时可以将dev上的已进行的工作进行储藏，等以后恢复现场后继续工作。（如果不储藏，此时切换到另外一个bug分支的话，那么已经完成的那一部分代码将丢失）</p>
-<pre><code>git stash (当前分支还未提交的文件进行储藏)
-git stash list (查看当前分支储藏列表)
-git stash apply (恢复储藏的内容，但是stash并不删除，可用git stash drop删除)
-git stash pop (恢复储藏的内容，并且将stash删除)
-</code></pre><blockquote>
-<p>分支的其他操作</p>
-</blockquote>
-<p>注意：clone代码的时候，只有master分支，其他分支是不会clone下来的，所以想要想要创建远程的dev分支到本地：</p>
-<pre><code>git checkout -b dev origin/dev
-</code></pre><p>另外也可以通过命令行在本地创建与服务器上相对应的分支名，执行命令，建立本地与远程的分支连接：    </p>
-<pre><code>git branch --set-upstream dev origin/dev；
-</code></pre><h1 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h1><p>不管用什么版本管理工具，只要多人协同工作，就一定会存在冲突，冲突的产生无外乎，多个人同时修改了某一个文件的某一段代码，那么此时，要如何取舍，版本管理工具当然不能判定那个是需要留下来的，此时，需要人工操作，但是git也会给出友好提示。</p>
-<pre><code>$ git stash apply
-Auto-merging reset.txt
-CONFLICT (content): Merge conflict in reset.txt
-</code></pre><p>此时就可以定位到冲突的文件，进行人工修复，并再次提交，一般冲突我遇到有两种，一种是同事修改了某一个文件，并且已经提交，你在本地也已经修改此文件，当你拉取服务器上文件时，冲突就产生了。另外一种就是合并分支的时候，开发分支上有添加了代码，但是切换出去的分支上也改了此次代码，合并时问题也会产生。    </p>
-<h1 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a> </p>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-03-07T03:51:53.000Z"><a href="/2016/03/07/gulp/">2016-03-07</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/03/07/gulp/">gulp</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用她，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率。</p>
-<h1 id="gulp能帮我们做什么"><a href="#gulp能帮我们做什么" class="headerlink" title="gulp能帮我们做什么?"></a>gulp能帮我们做什么?</h1><ul>
-<li>javascript语法的检测、合并，压缩。</li>
-<li>css的压缩、合并、sass/less的编译</li>
-<li>images的压缩、合并</li>
-<li>浏览器自动刷新</li>
-<li>部署文件生产替换</li>
-<li>监控文件变化并自动生产相应文件</li>
-</ul>
-<h1 id="gulp的安装"><a href="#gulp的安装" class="headerlink" title="gulp的安装"></a>gulp的安装</h1><p>gulp是基于Nodejs的自动任务运行器，这里默认已经安装了nodejs</p>
-<blockquote>
-<p>全局安装gulp</p>
-</blockquote>
-<pre><code>npm install --global gulp
-</code></pre><blockquote>
-<p>作为项目的开发依赖安装</p>
-</blockquote>
-<pre><code>npm install --save-dev gulp
-</code></pre><blockquote>
-<p>在项目根目录下创建名为gulpfile.js的文件</p>
-</blockquote>
-<pre><code>var gulp = require(&apos;gulp&apos;);
-
-gulp.task(&apos;default&apos;, function(){});
-</code></pre><blockquote>
-<p>运行gulp 安装完成</p>
-</blockquote>
-<pre><code>gulp -v
-
-gulp
-</code></pre><h2 id="正常安装完成会出现版本号以及执行默认任务"><a href="#正常安装完成会出现版本号以及执行默认任务" class="headerlink" title="正常安装完成会出现版本号以及执行默认任务"></a>正常安装完成会出现版本号以及执行默认任务</h2><blockquote>
-<p>依赖文件</p>
-</blockquote>
-<p> 别忘记在项目的根目录下还应该建相应的资源依赖文件package.json文件，它只是一个普通的json文件(但是不可以写注释)，但是对项目来说，不可或缺，里面不仅存在项目的具体描述信息，还存有项目所需要的包依赖，使用它可以记录相关的gulp插件，以便多人开始时协同使用，另外也可以指令建立：</p>
-<pre><code>npm init
-</code></pre><h1 id="gulp原理"><a href="#gulp原理" class="headerlink" title="gulp原理"></a>gulp原理</h1><p>  在实现上，glup借鉴了Unix操作系统的管道（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单。但是需要注意的是，gulp运行的过程中不会产生临时文件，所有的文件都是虚拟的，直到指定相应目录进行输出。</p>
-<h1 id="gulp函数"><a href="#gulp函数" class="headerlink" title="gulp函数"></a>gulp函数</h1><h2 id="gulp-src"><a href="#gulp-src" class="headerlink" title="gulp.src()"></a>gulp.src()</h2><p>gulp.src()方法输入一个glob(比如匹配一个或多个文件的字符串)或者glob数组，然后返回一个可以传递给插件的数据流。</p>
-<p>Gulp使用node-glob来从你指定的glob里面获取文件,主要匹配规则有以下规则（以js为例）</p>
-<ul>
-<li>js/app.js 精确匹配文件</li>
-<li>js/*.js 仅匹配js目录下的所有后缀为.js的文件</li>
-<li>js/*/.js 匹配js目录及其子目录下所有后缀为.js的文件</li>
-<li>!js/app.js 从匹配结果中排除js/app.js，这种方法在你想要匹配除了特殊文件之外的所有文件时非常管用</li>
-<li>*.+(js|css) 匹配根目录下所有后缀为.js或者.css的文件</li>
-</ul>
-<h2 id="gulp-task"><a href="#gulp-task" class="headerlink" title="gulp.task()"></a>gulp.task()</h2><p>gulp.task()函数通常会被用来定义任务。当你定义一个简单的任务时，需要传入任务名字和执行函数两个属性。</p>
-<pre><code>gulp.task(&apos;greet&apos;, function () {
-       console.log(&apos;Hello world!&apos;);
-});
-</code></pre><p>一个任务有时也可以是一系列任务。假设要定义一个任务build来执行css、js、imgs这三个任务，我们可以通过指定一个任务数组而不是函数来完成。</p>
-<pre><code>gulp.task(&apos;build&apos;, [&apos;css&apos;, &apos;js&apos;, &apos;imgs&apos;]);
-</code></pre><p>这些任务不是同时进行的，所以你不能认为在js任务开始的时候css任务已经结束了，也可能还没有结束。为了确保一个任务在另一个任务执行前已经结束，可以将函数和任务数组结合起来指定其依赖关系。例如，定义一个css任务，在执行前需要检查greet任务是否已经执行完毕，这样做就是可行的:</p>
-<pre><code>gulp.task(&apos;css&apos;, [&apos;greet&apos;], function () { });
-</code></pre><p>现在，当执行css任务时，Gulp会先执行greet任务，然后在它结束后再调用你定义的函数。</p>
-<p>你可以定义一个在gulp开始运行时候默认执行的任务，并将这个任务命名为“default”：</p>
-<pre><code>gulp.task(&apos;default&apos;, function () { });
-</code></pre><h2 id="gulp-dest"><a href="#gulp-dest" class="headerlink" title="gulp.dest()"></a>gulp.dest()</h2><p>gulp.dest()方法是用来写文件的，他将经过gulp处理的文件输出到相应目录</p>
-<pre><code>var gulp = reruire(&apos;gulp&apos;);
-gulp.src(&apos;script/**/*.js&apos;)
-    .pipe(gulp.dest(&apos;dist&apos;));
-</code></pre><h2 id="gulp-watch"><a href="#gulp-watch" class="headerlink" title="gulp.watch()"></a>gulp.watch()</h2><p>gulp.watch()用来监视文件的变化，当文件发生变化后，我们可以利用它来执行相应的任务，例如文件压缩等</p>
-<pre><code>gulp.watch(glob[, opts], tasks)
-</code></pre><p>Gulp可以监听文件的修改动态，然后在文件被改动的时候执行一个或多个任务。这个特性十分有用（对我来说，这可能是Gulp中最有用的一个功能）。你可以保存LESS文件，接着Gulp会自动把它转换为CSS文件并更新浏览器。</p>
-<p>使用gulp.watch()方法可以监听文件，它接受一个glob或者glob数组（和gulp.src()一样）以及一个任务数组来执行回调。</p>
-<p>让我们看看下面，build任务可以将模板转换成html格式，然后我们希望定义一个watch任务来监听模板文件的变化，并将这些模板转换成html格式。watch函数的使用方法如下所示：</p>
-<pre><code>gulp.task(&apos;watch&apos;, function () {
-       gulp.watch(&apos;templates/*.tmpl.html&apos;, [&apos;build&apos;]);
-});
-</code></pre><p>现在，当改变一个模板文件时，build任务会被执行并生成HTML文件，也可以给watch函数一个回调函数，而不是一个任务数组。在这个示例中，回调函数有一个包含触发回调函数信息的event对象：</p>
-<pre><code>gulp.watch(&apos;templates/*.tmpl.html&apos;, function (event) {
-       console.log(&apos;Event type: &apos; + event.type); // added, changed, or deleted
-       console.log(&apos;Event path: &apos; + event.path); // The path of the modified file
-});
-</code></pre><p>Gulp.watch()的另一个非常好的特性是返回我们熟知的watcher。利用watcher来监听额外的事件或者向watch中添加文件。例如，在执行一系列任务和调用一个函数时，你就可以在返回的watcher中添加监听change事件:</p>
-<pre><code>var watcher = gulp.watch(&apos;templates/*.tmpl.html&apos;, [&apos;build&apos;]);
-    watcher.on(&apos;change&apos;, function (event) {
-       console.log(&apos;Event type: &apos; + event.type); // added, changed, or deleted
-       console.log(&apos;Event path: &apos; + event.path); // The path of the modified file
-});
-</code></pre><p>除了change事件，还可以监听很多其他的事件:</p>
-<ul>
-<li>end 在watcher结束时触发（这意味着，在文件改变的时候，任务或者回调不会执行）</li>
-<li>error 在出现error时触发</li>
-<li>ready 在文件被找到并正被监听时触发</li>
-<li>nomatch 在glob没有匹配到任何文件时触发</li>
-<li><p>Watcher对象也包含了一些可以调用的方法：</p>
-</li>
-<li><p>watcher.end() 停止watcher（以便停止执行后面的任务或者回调函数）</p>
-</li>
-<li>watcher.files() 返回watcher监听的文件列表</li>
-<li>watcher.add(glob) 将与指定glob相匹配的文件添加到watcher（也接受可选的回调当第二个参数）</li>
-<li>watcher.remove(filepath) 从watcher中移除个别文件</li>
-</ul>
-<h1 id="gulp常用插件"><a href="#gulp常用插件" class="headerlink" title="gulp常用插件"></a>gulp常用插件</h1><blockquote>
-<p>js语法检测</p>
-</blockquote>
-<pre><code>var jshint = require(&quot;gulp-jshint&quot;),
-</code></pre><blockquote>
-<p>js压缩</p>
-</blockquote>
-<pre><code>var uglify = require(&quot;gulp-uglify&quot;),
-</code></pre><blockquote>
-<p>css压缩</p>
-</blockquote>
-<pre><code>var minifycss = require(&quot;gulp-minify-css&quot;),
-</code></pre><blockquote>
-<p>sass编译</p>
-</blockquote>
-<pre><code>var sass = require(&quot;gulp-ruby-sass&quot;),
-</code></pre><blockquote>
-<p>图片压缩</p>
-</blockquote>
-<pre><code>var imagemin = require(&quot;gulp-imagemin&quot;)
-</code></pre><blockquote>
-<p>雪碧图合并</p>
-</blockquote>
-<pre><code>var spriter = require(&quot;gulp-css-spriter&quot;)
-</code></pre><blockquote>
-<p>js、css的合并</p>
-</blockquote>
-<pre><code>var concat = require(&quot;gulp-concat&quot;)
-</code></pre><blockquote>
-<p>文件重命名</p>
-</blockquote>
-<pre><code>var rename = require(&quot;gulp-rename&quot;)
-</code></pre><blockquote>
-<p>MD5戳</p>
-</blockquote>
-<pre><code>var md5 = require(&quot;gulp-rev&quot;)
-</code></pre><blockquote>
-<p>路径替换</p>
-</blockquote>
-<pre><code>var collector = require(&quot;gulp-rev-collector&quot;) 
-</code></pre><blockquote>
-<p>刷新浏览器</p>
-</blockquote>
-<pre><code>var reload = require(&quot;gulp-livereload&quot;)
-</code></pre><p>以上这些就是gulp常用的插件，至于安装以及其中的用法，这里不做一一介绍，有兴趣的朋友自行研究即可。</p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>gulp作为前端的开发的自动化构建工具，确实帮我们完成了很多必要的工作，相对于其他前端构建工具运行速度快，一直为gulp所骄傲，但是同时由于项目的复杂性，以及认为的灵活性，gulp有时也会遇到瓶颈，建议可以参考参考其它构建工具，诸于fis等。</p>
-<p>（gulp的几大函数基本参数是必须掌握的，其中还有一些不常用的参数配置，这里不一一介绍，在项目中进行锻炼时可以慢慢体会）</p>
-<p>下面是gulp的两个参考网站：</p>
-<ul>
-<li><p><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">gulp中文网</a></p>
-</li>
-<li><p><a href="http://www.w3cplus.com/blog/tags/528.html" target="_blank" rel="external">gulp系列教程</a></p>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-03-02T07:22:24.609Z"><a href="/2016/03/02/hello-world/">2016-03-02</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/03/02/hello-world/">Hello World</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-
-<nav id="pagination">
-  
-</nav>
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
+        2016-05-27
+    </p>
 </div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/05/06/angular/">
+        <h2 class="post-title">
+            angular
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-05-06
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/03/07/git/">
+        <h2 class="post-title">
+            git
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-03-07
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/03/07/gulp/">
+        <h2 class="post-title">
+            gulp
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-03-07
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/03/02/hello-world/">
+        <h2 class="post-title">
+            Hello World
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-03-02
+    </p>
+</div>
+<hr>
+            
 
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
-  <ul class="entry">
+            <ul class="pager">
     
-      <li>
-        <a href="/2016/05/27/webapp/">webapp</a>
-      </li>
     
-      <li>
-        <a href="/2016/05/06/angular/">angular</a>
-      </li>
-    
-      <li>
-        <a href="/2016/03/07/git/">git</a>
-      </li>
-    
-      <li>
-        <a href="/2016/03/07/gulp/">gulp</a>
-      </li>
-    
-      <li>
-        <a href="/2016/03/02/hello-world/">Hello World</a>
-      </li>
-    
-  </ul>
+</ul>
+        </div>
+    </div>
 </div>
 
 
-  
 
-  
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  <p>
-  
-  &copy; 2016 John Doe
-  
-  All rights reserved.</p>
-  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</div>
-<div class="clearfix"></div>
+    <!-- Footer -->
+    <hr />
 
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
 
 
-<div id='bg'></div>
 </body>
+
 </html>
