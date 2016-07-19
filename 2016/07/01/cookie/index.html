@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="cookie学习笔记cookie简介cookie是指web浏览器存储的少量数据，同时他是与具体的web页面或者站点相关的，cookie最早是设计为被服务端所用的，作为http协议的一种扩展实现它，cookie数据会自动在web浏览器和web服务器之前传输。
+注意：操作cookie的API在浏览器上是">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="cookie"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="null" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://yoursite.comundefined"/>
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>cookie - Hexo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>cookie</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-07-01
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="cookie学习笔记"><a href="#cookie学习笔记" class="headerlink" title="cookie学习笔记"></a>cookie学习笔记</h1><h2 id="cookie简介"><a href="#cookie简介" class="headerlink" title="cookie简介"></a>cookie简介</h2><p>cookie是指web浏览器存储的少量数据，同时他是与<strong>具体的web页面或者站点相关的</strong>，cookie最早是设计为被服务端所用的，作为http协议的一种扩展实现它，cookie数据会自动在web浏览器和web服务器之前传输。</p>
+<p><strong>注意</strong>：操作cookie的API在浏览器上是完全兼容的，只不过设计的初期并没有考虑那么多，所以根本没有提供诸如查询、设置、删除的方法，所有的这些操作都要通过以特殊的字符串形式读写document的cookie属性来完成。每个cookie的有效期和作用域都可以通过cookie属性来分别指定。</p>
+<h2 id="cookie的具实现"><a href="#cookie的具实现" class="headerlink" title="cookie的具实现"></a>cookie的具实现</h2><p>cookie除了常用的名称和值之外，还有比较关键的可选属性来控制cookie的有效期和作用域。</p>
+<ul>
+<li><p>有效期</p>
+<pre><code>cookie的默认有效期很短，它只能持续在web浏览器的会话期间，一旦用户关闭了浏览器，cookie保存的数据就丢失了。
+并且cookie的有效期并不是局限在浏览器的单个窗口中，它的有效期和整个浏览器进程而非浏览器窗口的有效期。
+如果要延长cookie的有效期，可以通过设置max-age属性来完成，但是必须明确的告诉浏览器cookie的有效期是多长，单位是秒。
+一旦设置了有效期，浏览器就会将cookie数据存储在一个文件中，并且直到过了指定的有效期才会删除该文件。
+expire属性与max-age同理，不通的是设置的步骤会多一步。
+</code></pre></li>
+<li><p>作用域</p>
+<pre><code>cookie的作用域是通过文档源和文档路径来确定的。该作用域通过cookie的path和domain属性来配置，
+默认情况下，cookie和创建它的web页面有关，并对该web页面以及和该web页面同目录或者子目录的其他web页面可见。
+
+比如：http://www.huzaixing.com/hzx/index.html页面创建了一个cookie，那么该cookie对http://www.huzaixing.com/hzx/
+http://www.huzaixing.com/hzx/huzaixing/的所有web页面都是可见的。
+但是对http://www.huzaixing.com/b.html、http://www.huzaixing.com/test/c.html等页面是不可见的。
+</code></pre></li>
+</ul>
+<ul>
+<li><p>path属性</p>
+<pre><code>默认的cookie基本满足最常见的需求，有时候您可能希望改变这种配置，
+例如很常见的你可能希望某一个页面创建的cookie在全网站都可以使用它，可以设置path属性，
+例如：http://www.huzaixing.com/hzx/huzaixing/index.html页面创建了cookie，并且将path属性设置为/hzx，
+那么对http://www.huzaixing.com/hzx/test/目录的web页面都是可见的。
+如果把路径设置为&quot;/&quot;,那么该cookie对任何http://www.huzaixing.com这台服务器上的页面都是可见的
+
+注意：cookie的path属性不能被用做访问控制机制。如果一个web页面想要读取同一个站点其他页面的cookie，
+只要简单的讲其他页面以隐藏iframe形式加载，随就可完全读取对应文档的cookie了。
+</code></pre></li>
+<li><p>domain属性</p>
+<p>  cookie的作用域默认由文档源限制，很常见的就是大型网站会有很多子域名，想要在子域名之间互相共享cookie。<br>  比如：www.huzaixing.com域下的服务器想要读取v.huzaixing.com或者e.huzaixing.com域下设置的cookie值<br>  其实就是要在多个子域名之间共享cookie，将domian属性设置为.huzaixing.com即可。<br>  如果没有设置domain属性，那么域属性默认值是当前web服务器的主机名。<br>  注意：cookie的域只能设置为当前服务器的域。</p>
+</li>
+<li><p>secure属性</p>
+<p>  secure属性表明cookie的值以何种形式通过网络传递。它是一个boolean值，cookie默认是以不安全的形式传递的，一旦是cookie被表示为<br>  安全的，那么只能当浏览器和服务器通过https或者其他的安全协议连接的时候才能传递它。</p>
+</li>
+</ul>
+<p><strong>注意：在javascript中，cookie不会采用任何加密机制,因此他们是不安全的</strong></p>
+<h2 id="cookie的增删查改"><a href="#cookie的增删查改" class="headerlink" title="cookie的增删查改"></a>cookie的增删查改</h2><p>由于JavaScript原生的API并没有提供更多操作cookie的方式，所以cookie的变更都是以设置为一个字符串形式的值来进行的。</p>
+<ul>
+<li><p>新增cookie</p>
+<pre><code>/**
+*设置cookie
+*parm name:cookie的名字
+*parm value:cookie的值
+*parm path:cookie的路径
+*parm domain:cookie的域
+*parm maxAge:cookie的有效时间        
+/
+
+function setCookie(name,value,path,domain,maxAge){
+    var cookie = &quot;&quot;
+    cookie += name + &quot;=&quot; encodeURIComponent(value);
+    if(path){
+        cookie += &apos;;path=&quot;&apos; + path + &apos;&quot;&apos;;
+    }
+    if(domain){
+        cookie += &apos;;domain=&quot;&apos; + domain + &apos;&quot;&apos;;
+    }
+    if(domain){
+        cookie += &apos;;max-age=&quot;&apos; + maxAge*60*60*24 + &apos;&quot;&apos;;
+    }
+     document.cookie = cookie;
+}
+</code></pre></li>
+<li><p>查询cookie</p>
+<pre><code>/**
+*获取指定cookie
+*parm name:cookie的名字
+*
+*return string 指定cookie名称的值 
+*    
+/
+
+function getCookie(name){
+    var value = &quot;&quot;;
+    var cookies = document.cookie;
+    if(cookies===&quot;&quot;){
+        return value;
+    }
+    var listCookie = cookies.split(&quot;; &quot;);
+    for(var i = 0 ; i &lt; listCookie.length; i++){
+        var thisCookie = listCookie[i];
+        var cindex = thisCookie.indexOf(&quot;=&quot;);
+        var cname = thisCookie.substring(0,cindex);
+        var cvalue = thisCookie.substring(cindex+1);
+        if(name == cname){
+            value = cvalue;
+            return encodeURIComponent(value);
+            break;
+        }
+    }
+    return value;
+}
+</code></pre></li>
+</ul>
+<ul>
+<li><p>删除cookie</p>
+<pre><code>/**
+*删除cookie
+*parm name:cookie的名字
+*通过设置指定cookie的值为空、有效时间为0来删除指定cookie;    
+/
+  function deleteCookie(name){
+    var value = &quot;&quot;;
+    var cookies = document.cookie;
+    if(cookies===&quot;&quot;){
+        return ;
+    }
+    var listCookie = cookies.split(&quot;; &quot;);
+    for(var i = 0 ; i &lt; listCookie.length; i++){
+        var thisCookie = listCookie[i];
+        var cindex = thisCookie.indexOf(&quot;=&quot;);
+        var cname = thisCookie.substring(0,cindex);
+        var cvalue = thisCookie.substring(cindex+1);
+        if(name == cname){
+            document.cookie = name + &apos;=&quot;&quot;; max-age=0&apos;;
+        }
+    }
+}
+</code></pre></li>
+<li><p>清空cookie</p>
+<pre><code>/**
+*清空cookie
+*通过设置指所有cookie的值为空、有效时间为0来删除指定cookie;    
+/
+  function clearCookie(){
+    var value = &quot;&quot;;
+    var cookies = document.cookie;
+    if(cookies===&quot;&quot;){
+        return ;
+    }
+    var listCookie = cookies.split(&quot;; &quot;);
+    for(var i = 0 ; i &lt; listCookie.length; i++){
+        var thisCookie = listCookie[i];
+        var cindex = thisCookie.indexOf(&quot;=&quot;);
+        var cname = thisCookie.substring(0,cindex);
+        document.cookie = cname + &apos;=&quot;&quot;; max-age=0&apos;;
+    }
+}
+</code></pre></li>
+</ul>
+<p><strong>注意：</strong> 标准浏览器不允许浏览器保存超过300个cookie，每个web服务器保存的cookie基本不能超过20个，并且每个cookie的数据不能<br>超过4KB（虽然现代浏览器运行cookie的总数超过300个）。cookie的值不允许分号、逗号以及空白符，因此在存储前一般采用<br>encodeURIComponent()对值进行编码，获取的时候使用decodeURIComponent函数进行解码</p>
+<h2 id="jquery-cookie"><a href="#jquery-cookie" class="headerlink" title="jquery cookie"></a>jquery cookie</h2><p>鉴于原生的浏览器并没有提供诸如增删查改的具体实现，jquery.cookie提供了一套简介的API：</p>
+<ul>
+<li><p>获取cookie</p>
+<pre><code>$.cookie(name) //指定的cookie名称
+</code></pre></li>
+<li><p>设置cookie</p>
+<pre><code>$.cookie(name,value) //指定的cookie名称以及值
+</code></pre></li>
+<li><p>删除cookie </p>
+<pre><code>$.cookie(name,&quot;&quot;) //指定的cookie名称以及值
+</code></pre></li>
+<li><p>作用域以及过期时间、路径</p>
+<pre><code>$.cookie(name,value,{path:&quot;/&quot;,domain:&quot;huzaixing.com&quot;,expires:&quot;1&quot;}) //过期时间单位是天
+</code></pre></li>
+<li><p>raw</p>
+<pre><code>默认值：false。 默认情况下，读取和写入cookie的时候自动进行编码和解码（使用encodeURIComponent编码，decodeURIComponent解码）。
+</code></pre></li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
